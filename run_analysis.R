@@ -1,10 +1,9 @@
 ## run_analysis.R
-## Submited by Alon Gur-Arie 2016-04-08
 ##
 ## Description: Script for reading the raw data of the 'Human Activity Recognition Using Smartphones' dataset
 ## and producing a tidy dataset
 ##
-## Purpose: Course project of 'Getting and Cleaning Data' course (https://class.coursera.org/getdata-031)
+## Purpose: Course project of 'Getting and Cleaning Data' course 
 ##
 ## Notes:
 ##   - The script produces two files:
@@ -99,6 +98,6 @@ measurements.agg <- aggregate(. ~ subjectId + activity, data = measurements, FUN
 
 ## Step 10. Write tidy dataset to files
 
-write.table(measurements, file.path(tidy.data.dir, 'tidy_all.txt'), row.names = FALSE)
-write.table(measurements.agg, file.path(tidy.data.dir, 'tidy_avg.txt'), row.names = FALSE)
+write.table(measurements, file.path(tidy.data.dir, 'tidy_avg.txt'), row.names = FALSE)
+write.table(measurements.agg, file.path(tidy.data.dir, 'tidy_all.txt'), row.names = FALSE)
 
